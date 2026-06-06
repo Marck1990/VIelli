@@ -424,3 +424,111 @@ body {
     padding: 1.4rem;
   }
 }
+
+
+
+/* bandera de aparicio */
+.logo-bandera {
+  width: 58px;
+  height: 34px;
+  object-fit: cover;
+  border-radius: 3px;
+  transform-origin: left center;
+  animation: flameoBandera 3.8s ease-in-out infinite;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  clip-path: polygon(
+    0% 0%,
+    100% 3%,
+    96% 18%,
+    100% 34%,
+    96% 50%,
+    100% 66%,
+    96% 82%,
+    100% 97%,
+    0% 100%
+  );
+}
+
+@keyframes flameoBandera {
+  0% {
+    transform: perspective(180px) rotateY(0deg) skewY(0deg) scaleX(1);
+    clip-path: polygon(
+      0% 0%,
+      100% 3%,
+      96% 18%,
+      100% 34%,
+      96% 50%,
+      100% 66%,
+      96% 82%,
+      100% 97%,
+      0% 100%
+    );
+  }
+
+  25% {
+    transform: perspective(180px) rotateY(10deg) skewY(1.5deg) scaleX(0.97);
+    clip-path: polygon(
+      0% 0%,
+      96% 2%,
+      100% 18%,
+      96% 34%,
+      100% 50%,
+      96% 66%,
+      100% 82%,
+      96% 98%,
+      0% 100%
+    );
+  }
+
+  50% {
+    transform: perspective(180px) rotateY(0deg) skewY(0deg) scaleX(1);
+    clip-path: polygon(
+      0% 0%,
+      100% 3%,
+      96% 18%,
+      100% 34%,
+      96% 50%,
+      100% 66%,
+      96% 82%,
+      100% 97%,
+      0% 100%
+    );
+  }
+
+  75% {
+    transform: perspective(180px) rotateY(-8deg) skewY(-1.5deg) scaleX(1.02);
+    clip-path: polygon(
+      0% 0%,
+      98% 4%,
+      94% 18%,
+      98% 34%,
+      94% 50%,
+      98% 66%,
+      94% 82%,
+      98% 96%,
+      0% 100%
+    );
+  }
+
+  100% {
+    transform: perspective(180px) rotateY(0deg) skewY(0deg) scaleX(1);
+    clip-path: polygon(
+      0% 0%,
+      100% 3%,
+      96% 18%,
+      100% 34%,
+      96% 50%,
+      100% 66%,
+      96% 82%,
+      100% 97%,
+      0% 100%
+    );
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-bandera {
+    width: 50px;
+    height: 30px;
+  }
+}
